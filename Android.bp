@@ -97,7 +97,7 @@ cc_library_static {
 
     sdk_version: "9",
 
-    stl: "stlport_static",
+    stl: "c++_static",
 }
 
 // C++ lite library for the platform and host.
@@ -211,22 +211,7 @@ cc_library_static {
 
     sdk_version: "9",
 
-    stl: "stlport_static",
-}
-
-// C++ full library for the NDK, Gnustl+rtti version.
-// =======================================================
-cc_library_static {
-    name: "libprotobuf-cpp-full-ndk-gnustl-rtti",
-    defaults: ["libprotobuf-cpp-lite-defaults"],
-
-    srcs: protobuf_cc_full_src_files,
-    shared_libs: ["libz"],
-
-    rtti: true,
-    sdk_version: "14",
-    stl: "gnustl_static",
-
+    stl: "c++_static",
 }
 
 // C++ full library for the platform and host
